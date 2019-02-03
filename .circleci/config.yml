@@ -4,10 +4,13 @@ jobs:
     docker:
       - image: debian:stretch
     steps:
-      - checkout
+#       - checkout
       - run:
-          name: Greeting
-          command: echo Hello, world.
+          name: Time
+          command: date
       - run:
-          name: Print the Current Time
+          name: Compile
+          command: gcc
+      - run:
+          name: Time
           command: date
