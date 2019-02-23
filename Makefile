@@ -28,7 +28,12 @@ EP=$(TESTDIR)/main.cpp
 DLIBS=$(IPATH) $(LPATH) $(StLIBS) $(DyLIBS)
 PLIBS=$(IPATH) $(LPATH) $(StLIBS) $(DyLIBS)
 
-CC=g++ -std=c++14 -W
+ifeq ($(shell uname -o),Cygwin)
+	CC=x86_64-w64-mingw32-g++ -std=c++14 -W
+	AR=x86_64-w64-mingw32-ar
+else
+	CC=g++ -std=c++14 -W
+endif
 
 all: build
 build: setup_src gengine test
@@ -43,9 +48,9 @@ gengine:
 	cp $(LIBDIR)/OGL/libopengl32.a $(CASHDIR)
 	cp $(SRCDIR)/gengine.hpp include/
 	cd $(CASHDIR) && \
-		ar x libglfw3.a && \
-		ar x libopengl32.a && \
-		ar rc $(LLABEL) *.o *.obj && \
+		$(AR) x libglfw3.a && \
+		$(AR) x libopengl32.a && \
+		$(AR) rc $(LLABEL) *.o *.obj && \
 		cp $(LLABEL) ../libs/
 	$(RCASH)
 
