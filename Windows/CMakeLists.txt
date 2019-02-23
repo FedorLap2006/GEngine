@@ -25,7 +25,7 @@ include_directories(
         ${GLFW_INCLUDE_DIRS}
 )
 
-add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS})
+add_executable(${PROJECT_NAME} tests/main.cpp ${SOURCES} ${HEADERS})
 target_link_libraries(${PROJECT_NAME} ${OPENGL_gl_LIBRARY} ${GLFW_LIBRARIES})
 target_include_directories(${PROJECT_NAME} PUBLIC include)
 #install (TARGETS xlang DESTINATION bin)
