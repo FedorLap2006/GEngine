@@ -11,7 +11,7 @@ set(HEADERS
    include/gengine.hpp
     )
 set(CMAKE_LEGACY_CYGWIN_WIN32 0)
-set(CMAKE_MODULE_PATH ./cmake)
+set(CMAKE_MODULE_PATH ./cmake/modules)
 set(NO_GLFW_X11 true)
 find_package(OpenGL REQUIRED)
 
