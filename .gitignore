@@ -1,3 +1,6 @@
 .vs/*
 *.swp
 *.swo
+build/
+*.o
+*.a
