@@ -1,5 +1,15 @@
 #include "gengine.hpp"
 
+bool init(){
+	if(glfwInit()) fail_gl=false;
+	else fail_gl=true;
+	is_init=true;
+}
+void clean(){
+	if(!fail_gl) glfwTerminate();
+	is_clean=true;
+}
+
 Game2D::Game2D(string title,bool dev){
 	if(!is_init) init();
 	if(!fail_gl) {

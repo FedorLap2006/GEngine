@@ -15,18 +15,6 @@ static bool fail_gl;
 static bool is_init=false;
 static bool is_clean=false;
 
-bool init(){
-	if(glfwInit()) fail_gl=false;
-	else fail_gl=true;
-	is_init=true;
-}
-void clean(){
-	if(!fail_gl) glfwTerminate();
-	is_clean=true;
-}
-
-
-
 class Game2D; 
 class Game3D;
 
