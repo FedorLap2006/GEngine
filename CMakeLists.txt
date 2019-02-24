@@ -32,7 +32,7 @@ set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
 set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
 
 add_subdirectory(vendor/glfw)
-#add_subdirectory(vendor/glm)
+add_subdirectory(vendor/glm)
 find_package(OpenGL REQUIRED)
 #==============================================
 
@@ -45,7 +45,7 @@ include_directories(
 add_executable(${PROJECT_NAME} tests/main.cpp ${SOURCES} ${HEADERS})
 
 target_link_libraries(${PROJECT_NAME} glfw)
-#target_link_libraries(${PROJECT_NAME} glm)
+target_link_libraries(${PROJECT_NAME} glm)
 target_link_libraries(${PROJECT_NAME} ${OPENGL_gl_LIBRARY})
 target_link_libraries(${PROJECT_NAME} ${OPENGL_glu_LIBRARY})
 target_include_directories(${PROJECT_NAME} PUBLIC include)
