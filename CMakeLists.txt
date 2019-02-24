@@ -28,8 +28,6 @@ set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
 set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
 set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
 
-set(BUILD_SHARED_LIBS ON)
-set(CMAKE_TOOLCHAIN_FILE=CMake/x86_64-w64-mingw32.cmake)
 add_subdirectory(vendor/glfw)
 find_package(OpenGL REQUIRED)
 #==============================================
