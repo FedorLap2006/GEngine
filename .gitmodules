@@ -1,3 +1,6 @@
 [submodule "Windows/vendor/glfw"]
 	path = Windows/vendor/glfw
 	url = https://github.com/glfw/glfw
+[submodule "vendor/glfw"]
+	path = vendor/glfw
+	url = https://github.com/glfw/glfw

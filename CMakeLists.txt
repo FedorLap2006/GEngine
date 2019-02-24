@@ -9,12 +9,14 @@ endif()
 set(SOURCES
    src/draw.cpp
    src/game2d.cpp
-   #src/game3d.cpp
+   src/defs.cpp
    src/gengine.cpp
     )
 
 set(HEADERS
    include/draw.hpp
+   include/game2d.hpp
+   include/defs.hpp
    include/gengine.hpp
     )
 

@@ -1,4 +1,4 @@
-#include "defs.h"
+#include "defs.hpp"
 
 bool fail_gl;
 

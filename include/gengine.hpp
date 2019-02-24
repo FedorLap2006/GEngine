@@ -1,6 +1,6 @@
 #pragma once
 // #define GLFW_DLL
-#include "defs.h"
+#include "defs.hpp"
 // #include "GLFW/glfw3.h" // GLFW
 using namespace std;
 
