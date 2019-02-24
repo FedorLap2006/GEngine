@@ -42,7 +42,7 @@ include_directories(
         "${PROJECT_SOURCE_DIR}/include"
 )
 
-add_library(${PROJECT_NAME} tests/main.cpp ${SOURCES} ${HEADERS})
+add_executable(${PROJECT_NAME} tests/main.cpp ${SOURCES} ${HEADERS})
 
 target_link_libraries(${PROJECT_NAME} glfw)
 #target_link_libraries(${PROJECT_NAME} glm)
