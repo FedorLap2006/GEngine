@@ -1,5 +1,8 @@
 cmake_minimum_required (VERSION 2.6)
 project(GEngine)
+
+set(CMAKE_CXX_STANDARD 14)
+
 if (CYGWIN)
   #FOR GLFW COMPILATION
   set (WIN32 1)
@@ -29,19 +32,20 @@ set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
 set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
 
 add_subdirectory(vendor/glfw)
+add_subdirectory(vendor/glm)
 find_package(OpenGL REQUIRED)
 #==============================================
 
 include_directories(
         ${OPENGL_INCLUDE_DIR}
-        ${GLFW_INCLUDE_DIRS}
+        ${GLM_INCLUDE_DIRS}
         "${PROJECT_SOURCE_DIR}/include"
 )
 
-#add_definitions(-DGLFW_DLL)
 add_executable(${PROJECT_NAME} tests/main.cpp ${SOURCES} ${HEADERS})
 
 target_link_libraries(${PROJECT_NAME} glfw)
+target_link_libraries(${PROJECT_NAME} glm)
 target_link_libraries(${PROJECT_NAME} ${OPENGL_gl_LIBRARY})
 target_link_libraries(${PROJECT_NAME} ${OPENGL_glu_LIBRARY})
 target_include_directories(${PROJECT_NAME} PUBLIC include)
