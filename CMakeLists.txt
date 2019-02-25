@@ -10,10 +10,10 @@ if (CYGWIN)
 endif()
 
 if (MINGW)
-	target_compile_options(${PROJECT_NAME} -finput-charset=UTF-8 -fexec-charset=UTF-8)
+#	target_compile_options(${PROJECT_NAME} -finput-charset=UTF-8 -fexec-charset=UTF-8)
 endif()
 if (MSVC)
-	target_compile_options(${PROJECT_NAME} /p:CharacterSet=Unicode) 
+#	target_compile_options(${PROJECT_NAME} /p:CharacterSet=Unicode) 
 endif()
 
 set(SOURCES
