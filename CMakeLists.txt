@@ -54,7 +54,7 @@ if ( BUILD_SHARED_LIBS )
 	add_library(${PROJECT_NAME} SHARED 
 		${SOURCES}
 	)
-else
+else()
 	add_library(${PROJECT_NAME} STATIC
 		${SOURCES}
 	)
