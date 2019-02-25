@@ -53,15 +53,6 @@ include_directories(
 
 # add_executable(${PROJECT_NAME} tests/main.cpp ${SOURCES} ${HEADERS})
 
-target_link_libraries(${PROJECT_NAME} glfw)
-target_link_libraries(${PROJECT_NAME} glm)
-target_link_libraries(${PROJECT_NAME} ${OPENGL_gl_LIBRARY})
-target_link_libraries(${PROJECT_NAME} ${OPENGL_glu_LIBRARY})
-target_include_directories(${PROJECT_NAME} PUBLIC include)
-if (WIN32)
-  target_link_libraries(${PROJECT_NAME} ${GDI32_LIBRARY})
-endif()
-
 if ( BUILD_SHARED_LIBS ) 
 	add_library(${PROJECT_NAME} SHARED 
 		${SOURCES}
@@ -71,3 +62,13 @@ else()
 		${SOURCES}
 	)
 endif()
+
+target_link_libraries(${PROJECT_NAME} glfw)
+target_link_libraries(${PROJECT_NAME} glm)
+target_link_libraries(${PROJECT_NAME} ${OPENGL_gl_LIBRARY})
+target_link_libraries(${PROJECT_NAME} ${OPENGL_glu_LIBRARY})
+target_include_directories(${PROJECT_NAME} PUBLIC include)
+if (WIN32)
+  target_link_libraries(${PROJECT_NAME} ${GDI32_LIBRARY})
+endif()
+
