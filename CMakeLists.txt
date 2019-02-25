@@ -50,15 +50,6 @@ include_directories(
         "${PROJECT_SOURCE_DIR}/include"
 )
 
-if ( BUILD_SHARED_LIBS ) 
-	add_library(${PROJECT_NAME} SHARED 
-		${SOURCES}
-	)
-else()
-	add_library(${PROJECT_NAME} STATIC
-		${SOURCES}
-	)
-endif()
 
 # add_executable(${PROJECT_NAME} tests/main.cpp ${SOURCES} ${HEADERS})
 
@@ -69,4 +60,14 @@ target_link_libraries(${PROJECT_NAME} ${OPENGL_glu_LIBRARY})
 target_include_directories(${PROJECT_NAME} PUBLIC include)
 if (WIN32)
   target_link_libraries(${PROJECT_NAME} ${GDI32_LIBRARY})
+endif()
+
+if ( BUILD_SHARED_LIBS ) 
+	add_library(${PROJECT_NAME} SHARED 
+		${SOURCES}
+	)
+else()
+	add_library(${PROJECT_NAME} STATIC
+		${SOURCES}
+	)
 endif()
