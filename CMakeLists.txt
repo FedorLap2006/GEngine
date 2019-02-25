@@ -9,6 +9,13 @@ if (CYGWIN)
   find_library(GDI32_LIBRARY gdi32)
 endif()
 
+if (MINGW)
+	target_compile_options(${PROJECT_NAME} -finput-charset=UTF-8 -fexec-charset=UTF-8)
+endif()
+if (MSVC)
+	target_compile_options(${PROJECT_NAME} /p:CharacterSet=Unicode) 
+endif()
+
 set(SOURCES
    src/draw.cpp
    src/game2d.cpp
@@ -24,6 +31,7 @@ set(HEADERS
     )
 
 set(CMAKE_MODULE_PATH ./cmake/modules)
+
 
 #GLFW 
 
@@ -42,7 +50,17 @@ include_directories(
         "${PROJECT_SOURCE_DIR}/include"
 )
 
-add_executable(${PROJECT_NAME} tests/main.cpp ${SOURCES} ${HEADERS})
+if ( BUILD_SHARED_LIBS ) 
+	add_library(${PROJECT_NAME} SHARED 
+		${SOURCES}
+	)
+else
+	add_library(${PROJECT_NAME} STATIC
+		${SOURCES}
+	)
+endif()
+
+# add_executable(${PROJECT_NAME} tests/main.cpp ${SOURCES} ${HEADERS})
 
 target_link_libraries(${PROJECT_NAME} glfw)
 target_link_libraries(${PROJECT_NAME} glm)
