@@ -9,13 +9,6 @@ if (CYGWIN)
   find_library(GDI32_LIBRARY gdi32)
 endif()
 
-if (MINGW)
-#	target_compile_options(${PROJECT_NAME} -finput-charset=UTF-8 -fexec-charset=UTF-8)
-endif()
-if (MSVC)
-#	target_compile_options(${PROJECT_NAME} /p:CharacterSet=Unicode) 
-endif()
-
 set(SOURCES
    src/draw.cpp
    src/game2d.cpp
@@ -62,6 +55,14 @@ else()
 		${SOURCES}
 	)
 endif()
+
+if (MINGW)
+	target_compile_options(${PROJECT_NAME} -finput-charset=UTF-8 -fexec-charset=UTF-8)
+endif()
+if (MSVC)
+	target_compile_options(${PROJECT_NAME} /p:CharacterSet=Unicode) 
+endif()
+
 
 target_link_libraries(${PROJECT_NAME} glfw)
 target_link_libraries(${PROJECT_NAME} glm)
