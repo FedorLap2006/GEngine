@@ -57,11 +57,11 @@ else()
 endif()
 
 if (MINGW)
-	target_compile_options(${PROJECT_NAME} -finput-charset=UTF-8 )
-	target_compile_options(${PROJECT_NAME} -fexec-charset=UTF-8 )
+	target_compile_options(${PROJECT_NAME} PUBLIC -finput-charset=UTF-8 )
+	target_compile_options(${PROJECT_NAME} PUBLIC -fexec-charset=UTF-8 )
 endif()
 if (MSVC)
-	target_compile_options(${PROJECT_NAME} /p:CharacterSet=Unicode) 
+	target_compile_options(${PROJECT_NAME} PUBLIC /p:CharacterSet=Unicode) 
 endif()
 
 
