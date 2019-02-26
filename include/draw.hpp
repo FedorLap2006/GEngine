@@ -1,5 +1,6 @@
 #pragma once
-#include "GLFW/glfw3.h" // GLFW
+// #include "GLFW/glfw3.h" // GLFW
+#include "defs.hpp"
 #include <string>
 #include <cstdlib>
 #include <functional>
@@ -8,18 +9,22 @@
 
 using namespace std;
 
-typedef PC GLFloat;
 
-typedef Vec2 GLFloat**;
-typedef Vec3 GLFloat***;
-
-
-class Draw
+class GContext
 {
+private:
+		
 public:
-	drawPixel(PC,PC,PC);
-	drawPixel(PC,PC);
-	Draw();
-	~Draw();
+	drawPixel();
+	GContext();
+	GContext();
 	
+};
+
+class Window {
+public:
+
+private:
+	Window(GContext*);
+	~Window();
 };
