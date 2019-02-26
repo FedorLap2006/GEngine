@@ -34,12 +34,14 @@ set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
 
 add_subdirectory(vendor/glfw)
 add_subdirectory(vendor/glm)
+add_subdirectory(vendor/sdl)
 find_package(OpenGL REQUIRED)
 #==============================================
 
 include_directories(
         ${OPENGL_INCLUDE_DIR}
         ${GLM_INCLUDE_DIRS}
+        "vendor/sdl/include"
         "${PROJECT_SOURCE_DIR}/include"
 )
 
@@ -67,6 +69,7 @@ endif()
 
 target_link_libraries(${PROJECT_NAME} glfw)
 target_link_libraries(${PROJECT_NAME} glm)
+target_link_libraries(${PROJECT_NAME} ${SDL_LIBRARY})
 target_link_libraries(${PROJECT_NAME} ${OPENGL_gl_LIBRARY})
 target_link_libraries(${PROJECT_NAME} ${OPENGL_glu_LIBRARY})
 target_include_directories(${PROJECT_NAME} PUBLIC include)
