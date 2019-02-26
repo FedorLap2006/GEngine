@@ -1,5 +1,5 @@
 #include "gengine.hpp"
-
+#include "SDL.h"
 Game2D::Game2D(string title,bool dev){
 	if(!is_init) init();
 	if(!fail_gl) {

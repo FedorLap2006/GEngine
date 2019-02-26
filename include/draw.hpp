@@ -1,5 +1,6 @@
 #pragma once
 // #include "GLFW/glfw3.h" // GLFW
+<<<<<<< HEAD
 // #include <string>
 // #include <cstdlib>
 // #include <functional>
@@ -11,11 +12,19 @@
 #include "glm/gtc/matrix_projection.hpp"
 #include "glm/gtc/matrix_transform.hpp"
 #include "glm/gtc/type_ptr.hpp"
+=======
+#include "defs.hpp"
+#include <string>
+#include <cstdlib>
+#include <functional>
+#include <windows.h>
+#include <vector>
+>>>>>>> bcef9fa468d73b256582a9d869dda3b3011e789a
 
 using namespace std;
 
-typedef PC GLFloat;
 
+<<<<<<< HEAD
 
 
 class GContext
@@ -32,3 +41,23 @@ public:
 	
 };
 
+=======
+class GContext
+{
+private:
+		
+public:
+	drawPixel();
+	GContext();
+	GContext();
+	
+};
+
+class Window {
+public:
+
+private:
+	Window(GContext*);
+	~Window();
+};
+>>>>>>> bcef9fa468d73b256582a9d869dda3b3011e789a
