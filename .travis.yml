@@ -4,6 +4,7 @@ sudo: true
 # install:
 #  - libxrandr
 #  - libwrandr
+os: windows
 addons:
   apt:
     sources:
