@@ -1,21 +1,21 @@
 version: 2
 jobs:
   build:
-    environment: #environment
+    environment: # environment
     docker:
       - image: debian:stretch
       # - image: gcc
     steps:
 #       - checkout
       - run:
-          name: platform check
+          name: platform
           command: uname -a
       - run: 
-          name: test apt-get
-          command: apt-get update && apt-get install build-essential -y
-      - run:
-          name: view /usr/bin && /bin directory
-          command: ls -l /usr/bin && ls -l /bin
+          name: install apps
+          command: apt-get update && apt-get install build-essential -y && apt-get install cmake -y
+      -run:
+          name: List files in directory
+          command: ls && pwd
       - run:
           name: Compile
           command: g++ -v
