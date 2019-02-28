@@ -4,7 +4,7 @@ jobs:
     environment: #environment
     docker:
       - image: debian:stretch
-      - image: gcc
+      # - image: gcc
     steps:
 #       - checkout
       - run:
@@ -12,13 +12,10 @@ jobs:
           command: uname -a
       - run: 
           name: test apt-get
-          command: apt-get
-      - run:
-          name: Test binary dir
-          command: tree / | grep gcc
+          command: apt-get install g++
       - run:
           name: Compile
-          command: /usr/bin/gcc -v
+          command: g++ -v
       - run:
           name: End
           command: date
