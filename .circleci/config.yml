@@ -8,6 +8,12 @@ jobs:
     steps:
 #       - checkout
       - run:
+          name: platform check
+          command: uname -a
+      - run: 
+          name: test apt-get
+          command: apt-get
+      - run:
           name: Test binary dir
           command: tree / | grep gcc
       - run:
