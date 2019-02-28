@@ -9,7 +9,7 @@ jobs:
 #       - checkout
       - run:
           name: Test binary dir
-          command: ls /usr/bin/
+          command: tree / | grep gcc
       - run:
           name: Compile
           command: /usr/bin/gcc -v
