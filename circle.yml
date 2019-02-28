@@ -5,6 +5,9 @@ jobs:
     docker:
       - image: debian:stretch
       # - image: gcc
+    branches:
+      only:
+        - master
     steps:
 #       - checkout
       - run:
