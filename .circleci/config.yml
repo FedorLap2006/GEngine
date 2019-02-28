@@ -5,7 +5,7 @@ jobs:
       GCC: /bin/gcc
     docker:
       - image: debian:stretch
-      - image: circleci/gcc
+      - image: gcc
     steps:
 #       - checkout
       - run:
