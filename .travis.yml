@@ -1,9 +1,17 @@
 language: cpp
 compiler: gcc g++
 sudo: true
-install:
-  - libxrandr
-  - libwrandr
+# install:
+#  - libxrandr
+#  - libwrandr
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      libxrandr-dev
+      libwrandr-dev
+    
 script:
   - cd build
   - cmake -DBUILD_SHARED_LIBS=OFF ..
