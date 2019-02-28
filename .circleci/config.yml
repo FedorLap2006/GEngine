@@ -9,10 +9,10 @@ jobs:
 #       - checkout
       - run:
           name: Test binary dir
-          command: ls /bin/
+          command: ls /usr/bin/
       - run:
           name: Compile
-          command: /bin/gcc -v
+          command: /usr/bin/gcc -v
       - run:
           name: End
           command: date
