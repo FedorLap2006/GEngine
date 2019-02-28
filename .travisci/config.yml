@@ -1,0 +1,5 @@
+languge: cpp
+compiler: gcc g++
+sudo: true
+script:
+  - g++ -v
