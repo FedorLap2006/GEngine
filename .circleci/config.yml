@@ -3,15 +3,12 @@ jobs:
   build:
     docker:
       - image: debian:stretch
-      - image: gcc
+      - image: circleci/gcc
     steps:
 #       - checkout
       - run:
-          name: Time
-          command: date
-      - run:
           name: Compile
-          command: gcc
+          command: gcc -v
       - run:
-          name: Time
+          name: End
           command: date
