@@ -1,7 +1,10 @@
 language: cpp
 compiler: gcc g++
 sudo: true
+install:
+  - libxrandr
+  - libwrandr
 script:
   - cd build
-  - cmake -DBUILD_SHARED_LIBS=OFF .. 
+  - cmake -DBUILD_SHARED_LIBS=OFF ..
   - g++ -v
