@@ -1,6 +1,8 @@
 # GEngine
 opengl (GLFW) game engine
 
+[![CodeFactor](https://www.codefactor.io/repository/github/fedorlap2006/gengine/badge)](https://www.codefactor.io/repository/github/fedorlap2006/gengine)
+
 to build project, make build directory in repository root
 and type this command:
 
