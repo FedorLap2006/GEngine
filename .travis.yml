@@ -2,4 +2,6 @@ language: cpp
 compiler: gcc g++
 sudo: true
 script:
+  - cd build
+  - cmake -DBUILD_SHARED_LIBS=OFF .. 
   - g++ -v
