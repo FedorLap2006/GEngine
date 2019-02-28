@@ -1,4 +1,4 @@
-languge: cpp
+language: cpp
 compiler: gcc g++
 sudo: true
 script:
