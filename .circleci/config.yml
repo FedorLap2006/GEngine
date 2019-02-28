@@ -1,6 +1,8 @@
 version: 2
 jobs:
   build:
+    enviroment:
+      GCC: /bin/gcc
     docker:
       - image: debian:stretch
       - image: circleci/gcc
@@ -8,7 +10,7 @@ jobs:
 #       - checkout
       - run:
           name: Compile
-          command: gcc -v
+          command: $GCC -v
       - run:
           name: End
           command: date
