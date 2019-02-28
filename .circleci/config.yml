@@ -1,16 +1,18 @@
 version: 2
 jobs:
   build:
-    enviroment:
-      GCC: /bin/gcc
+    environment: #environment
     docker:
       - image: debian:stretch
       - image: gcc
     steps:
 #       - checkout
       - run:
+          name: Test binary dir
+          command: ls /bin/
+      - run:
           name: Compile
-          command: $GCC -v
+          command: /bin/gcc -v
       - run:
           name: End
           command: date
