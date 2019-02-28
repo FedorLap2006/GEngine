@@ -12,10 +12,13 @@ jobs:
           command: uname -a
       - run: 
           name: test apt-get
-          command: apt-get install g++
+          command: apt-get install build-essential
+      - run:
+          name: view /usr/bin && /bin directory
+          command: ls -l /usr/bin && ls -l /bin
       - run:
           name: Compile
-          command: /usr/bin/g++ -v && /bin/g++ -v  
+          command: g++ -v
       - run:
           name: End
           command: date
