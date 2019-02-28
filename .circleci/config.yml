@@ -15,7 +15,7 @@ jobs:
           command: apt-get install g++
       - run:
           name: Compile
-          command: g++ -v
+          command: /usr/bin/g++ -v && /bin/g++ -v  
       - run:
           name: End
           command: date
