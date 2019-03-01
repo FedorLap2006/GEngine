@@ -1,9 +1,11 @@
 #include <GLFW/glfw3.h>
-#include "window.hpp"
+// #include "window.hpp"
+#include "object.hpp"
+
 
 namespace gengine {
 	typedef struct Render {
-		Window *win;
+		Object *objects;
 
 	};
 }
