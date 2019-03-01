@@ -1,11 +1,11 @@
 # GEngine
 opengl (GLFW) game engine
 
-## codefactor.io [![CodeFactor](https://www.codefactor.io/repository/github/fedorlap2006/gengine/badge)](https://www.codefactor.io/repository/github/fedorlap2006/gengine)
+[![CodeFactor](https://www.codefactor.io/repository/github/fedorlap2006/gengine/badge)](https://www.codefactor.io/repository/github/fedorlap2006/gengine)
 
-## travis ci [![Build Status](https://travis-ci.org/FedorLap2006/GEngine.svg?branch=master)](https://travis-ci.org/FedorLap2006/GEngine)
+[![Build Status](https://travis-ci.org/FedorLap2006/GEngine.svg?branch=master)](https://travis-ci.org/FedorLap2006/GEngine)
 
-## circle ci [![CircleCI](https://circleci.com/gh/FedorLap2006/GEngine.svg?style=svg)](https://circleci.com/gh/FedorLap2006/GEngine)
+[![CircleCI](https://circleci.com/gh/FedorLap2006/GEngine.svg?style=svg)](https://circleci.com/gh/FedorLap2006/GEngine)
 
 to build project, make build directory in repository root
 and type this command:
