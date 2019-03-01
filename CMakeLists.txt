@@ -10,17 +10,13 @@ if (CYGWIN)
 endif()
 
 set(SOURCES
-   src/draw.cpp
-   src/game2d.cpp
-   src/defs.cpp
-   src/gengine.cpp
+   src/*.cpp
+   src/*.c
     )
 
 set(HEADERS
-   include/draw.hpp
-   include/game2d.hpp
-   include/defs.hpp
-   include/gengine.hpp
+   include/*.hpp
+   include/*.h
     )
 
 set(CMAKE_MODULE_PATH ./cmake/modules)
