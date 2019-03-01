@@ -2,7 +2,7 @@
 opengl (GLFW) game engine
 
 [![CodeFactor](https://www.codefactor.io/repository/github/fedorlap2006/gengine/badge)](https://www.codefactor.io/repository/github/fedorlap2006/gengine)
-[![Build Status](https://travis-ci.org/FedorLap2006/GEngine.svg?branch=master)](https://travis-ci.org/FedorLap2006/GEngine)
+[![TravisCI Build Status](https://travis-ci.org/FedorLap2006/GEngine.svg?branch=master)](https://travis-ci.org/FedorLap2006/GEngine)
 
 to build project, make build directory in repository root
 and type this command:
