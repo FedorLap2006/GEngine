@@ -9,12 +9,12 @@ if (CYGWIN)
   find_library(GDI32_LIBRARY gdi32)
 endif()
 
-set(SOURCES
+file(GLOB SOURCES
    src/*.cpp
    src/*.c
     )
 
-set(HEADERS
+file(GLOB HEADERS
    include/*.hpp
    include/*.h
     )
@@ -29,8 +29,7 @@ set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
 set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
 
 add_subdirectory(vendor/glfw)
-add_subdirectory(vendor/glm)
-add_subdirectory(vendor/sdl)
+#add_subdirectory(vendor/glm)
 find_package(OpenGL REQUIRED)
 #==============================================
 
@@ -64,8 +63,8 @@ endif()
 
 
 target_link_libraries(${PROJECT_NAME} glfw)
-target_link_libraries(${PROJECT_NAME} glm)
-target_link_libraries(${PROJECT_NAME} ${SDL_LIBRARY})
+#target_link_libraries(${PROJECT_NAME} glm)
+#target_link_libraries(${PROJECT_NAME} ${SDL_LIBRARY})
 target_link_libraries(${PROJECT_NAME} ${OPENGL_gl_LIBRARY})
 target_link_libraries(${PROJECT_NAME} ${OPENGL_glu_LIBRARY})
 target_include_directories(${PROJECT_NAME} PUBLIC include)
